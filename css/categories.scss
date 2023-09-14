@@ -348,224 +348,102 @@ body {
     }
   }
   
-
-// ============================== gioi-thieu ==============================
-
-.about-wrap {
-    position: relative;
+// ============================== Categories ==============================
+.post-categories {
     width: 100%;
-    background-color: #FAFAFA;
-    background-image: url('../img/images/bg-clouds.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat-y;
-    padding: 120px;
+    position: relative;
+    margin-bottom: 120px;
 
-    .about-wrap__cloud {
-        position: absolute;
+    .post-categories__new {
+        margin-bottom: 40px;
+    }
+
+    .categories-card {
         width: 100%;
-        height: 362px;
-        top: -16%;
-        left: 0;
-        background-image: url('../img/images/Clouds-float.png');
-        background-size: contain;
-        background-position: center;
-        background-repeat: repeat-x;
-        z-index: 2;
-        animation: wind 50s linear infinite;
-    }
-
-    @keyframes wind{
-        0% {
-          background-position: 0 100px, 0 200px, 100px 250px;
-        }
-
-        100% {
-          background-position: 1000px 100px, 1200px 200px, 1100px 250px;
-        }
-      
-      }
-
-    .about-wrap__dream-1, .about-wrap__dream-2 {
-        width: 650px;
-        height: 650px;
-
-        & > img {
-            width: 650px;
-            height: 650px;
-            object-fit: contain; 
-        }
-    }
-
-    .about-wrap__dream-1 {
-        position: absolute;
-        left: -5%;
-        top: 10%;
-        transform: translateY(10%);
-        z-index: 5;
-    }
-
-    .about-wrap__dream-2 {
-        position: absolute;
-        right: -5%;
-        top: 10%;
-        transform: translateY(10%);
-        z-index: 5;
-    }
-
-    .about-wrap__content--img-top {
-        display: flex;
-        justify-content: center;
-        height: 200px;
         margin-bottom: 20px;
 
-        & > img {
-            height: 200px;
-            object-fit: contain;
+        &:hover {
+            .categories-card__img {
+                & > img {    
+                    width: 100%;
+                    height: 278px;
+                    display: flex;
+                    justify-content: center;
+                    transition: all 0.5s ease;
+                }
+            }
+    
+            .categories-card__title {
+                color: $blue;
+            }
+    
         }
-    }
 
-    .about-wrap__content--title {
-        font-size: 60px;
-        line-height: auto;
-        font-weight: 700;
-        font-family: 'STIX Two Text';
-        color: $blue-navy;
-        text-align: center;
-    }
+        &.categories-card--large {
+            &:hover {
+                .categories-card__img {
+                    & > img {    
+                        width: 100%;
+                        height: 883px;
+                        display: flex;
+                        justify-content: center;
+                        transition: all 0.5s ease;
+                    }
+                }
+        
+                .categories-card__title {
+                    color: $blue;
+                }
+        
+            }
 
-    .about-wrap__content--description {
-        display: flex;
-        justify-content: center;
-        width: 40%;
-        font-size: 24px;
-        line-height: 36px;
-        text-align: justify;
-        margin: 20px auto;
-    }
-
-    .about-wrap__content--more {
-        margin-bottom: 80px;
-    }
-
-    .about-wrap__creators {
-        display: flex;
-        justify-content: center;
-        height: 484px;
-
-        & > img {
-            height: 484px;
-        }
-    }
-
-    .about-wrap__limit-cloud {
-        width: 100%;
-    }
-}
-
-// ============================== bai-moi ==============================
-.new-post {
-    margin-bottom: 80px;
-}
-
-hr.hr-limited {
-    border-top: 0.5px solid $blue-navy;
-    margin: 16px auto;
-}
-
-.post__cart {
-    width: 100%;
-
-    &:hover {
-        .post__cart--img {
-            & > img {    
+            .categories-card__img {
                 width: 100%;
-                height: 446px;
-                display: flex;
-                justify-content: center;
-                transition: all 0.5s ease;
+                height: 683px;
+                overflow: hidden;
+                border-top-right-radius: 40px;
+                border-bottom-left-radius: 40px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                & > img {
+                    width: 100%;
+                    height: 683px;
+                    object-fit: cover;
+                }
+            }
+
+            .categories-card__title {
+                font-size: 32px;
+                line-height: 38px;
+                font-weight: 600;
+                color: $black;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                margin-bottom: 20px;
             }
         }
 
-        .post__cart--content {
-            color: $blue;
-        }
-
-    }
-
-    .post__cart--img {
-        width: 100%;
-        height: 346px;
-        border-top-right-radius: 40px;
-        border-bottom-left-radius: 40px;
-        overflow: hidden;
-        margin-bottom: 16px;
-
-        &.media__cart--img {
+        .categories-card__img {
             width: 100%;
-            height: 155px;
+            height: 178px;
+            overflow: hidden;
             border-top-right-radius: 20px;
             border-bottom-left-radius: 20px;
-            overflow: hidden;
 
             & > img {
-                width: 265px;
-                height: 155px;
+                width: 100%;
+                height: 178px;
                 object-fit: cover;
             }
         }
 
-        &.podcast__post--img {
-            width: 100%;
-            height: 240px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            overflow: hidden;
-
-            & > img {
-                width: 100%;
-                height: 280px;
-                object-fit: cover;
-            }
-        }
-
-        & > img {
-            width: 100%;
-            height: 346px;
-            object-fit: cover;
-        }
-
-    }
-
-    .post__cart--tag {
-        width: calc(100% - 90% + 82px);
-        height: 26px;
-        font-size: 18px;
-        line-height: 18px;
-        font-weight: 600;
-        text-align: center;
-        white-space: no-wrap;
-        color: $white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: $blue-navy;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        padding: 8px 16px;
-        margin-bottom: 10px;
-    }
-
-    .post__cart--content {
-        width: 100%;
-        font-size: 22px;
-        line-height: 26px;
-        font-weight: 600;
-        color: $black;
-
-        &.media__cart--content {
-            font-size: 16px;
-            line-height: 18px;
+        .categories-card__title {
+            font-size: 18px;
+            line-height: 28px;
             font-weight: 600;
             color: $black;
             overflow: hidden;
@@ -575,245 +453,25 @@ hr.hr-limited {
             -webkit-box-orient: vertical;
         }
 
-        &.podcast__cart--content {
-            display: flex;
-            align-items: center;
-
-            & > img {
-                width: 40px;
-                height: 40px;
-                margin-right: 10px;
-            }
-
-            .podcast__cart--description {
-                font-size: 20px;
-                line-height: 30px;
-                font-weight: 600;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                margin-bottom: 0px;
-            }
-
-        }
-    }
-}
-
-.post__list {
-    width: 100%;
-
-    & > ul {
-        padding: 0;
-        list-style: none;
-
-        li {margin-bottom: 26px;}
-    }
-
-    .item-cart {
-        display: flex;
-        align-items: center;
-
-        &:hover {
-            .item-cart__img {
-                & > img {
-                    width: 252px;
-                    height: 86px;
-                    display: flex;
-                    justify-content: center;
-                    transition: all 0.5s ease;
-                }
-            }
-
-            .item-cart__content {
-                & > p { color: $blue; }
-            }
-        }
-
-        .item-cart__img {
-            width: 100%;
-            height: 86px;
-            overflow: hidden;
-            margin-right: 16px;
-
-            & > img {
-                width: 152px;
-                height: 86px;
-                object-fit: cover;
-            }
-        }
-
-        .item-cart__content--tag {
-            width: 82px;
+        .categories-card__tag {
+            width: 94px;
             height: 26px;
-            background: $blue-navy;
             font-size: 18px;
-            line-height: 22px;
-            font-weight: 500;
+            line-height: 18px;
+            font-weight: 600;
+            text-align: center;
+            white-space: no-wrap;
             color: $white;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            background: $blue-navy;
             border-top-right-radius: 10px;
             border-bottom-left-radius: 10px;
+            padding: 8px 16px;
             margin-bottom: 10px;
         }
-
-        .item-cart__content {
-            & > p {
-                font-size: 20px;
-                line-height: 26px;
-                font-weight: 600;
-                color: $black;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-            }
-        }
     }
-}
-// ============================== Video - Podcast ==============================
-.media {
-    margin-bottom: 22%;
-}
-
-// ============================== Categories ==============================
-
-.categories-swiper {
-    width: 100%;
-    height: 100%;
-
-    .swiper-slide {
-        width: 420px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .swiper-pagination {
-        margin-top: 40px;
-    }
-}
-
-.categories {
-    position: relative;
-    width: 100%;
-    height: 650px;
-    background: $blue-navy-light;
-
-    .categories--topic {
-        margin-top: 80px;
-    }
-
-    .categories__rock {
-        position: absolute;
-        width: 100%;
-        height: 583px;
-        top: -50%;
-        left: 0;
-        background-image: url('../img/images/mountain.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: 1;
-    }
-
-    .categories__mountain {
-        position: absolute;
-        top: 0;
-    }
-
-    .categories__cart {
-        width: 100%;
-        padding: 16px;
-        background:rgba(255, 255, 255, 0.5);
-
-        &:hover {
-            background: $white;
-            background: #FFF;
-            /* shadow-blue */
-            box-shadow: 5px 5px 10px 0px #3B8ABC, -5px -5px 10px 0px #3B8ABC;
-            transition: all 0.5s ease;
-        }
-
-        .categories__cart--post {
-            .post__img {
-                width: 100%;
-                height: 230px;
-                overflow: hidden;
-
-                & > img {
-                    width: 100%;
-                    height: 230px;
-                    object-fit: cover;
-                }
-            }
-
-            .post__content {
-                font-size: 22px;
-                line-height: 28px;
-                font-weight: 500;
-                color: $black;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-            }
-        }
-
-        .categories__cart--link {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            font-size: 26px;
-            line-height: auto;
-            font-weight: 500;
-            color: $white;
-            background-color: $blue-navy;
-            border-radius: 40px;
-            padding: 4px 10px;
-            margin: auto;
-        
-            &:hover {
-                text-decoration: none;
-                box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
-                transition: all 0.5s ease;
-                background: $blue-navy;
-                color: $white;
-            }
-        }
-    }
-}
-
-// ============================== Gallery ==============================
-.gallery {
-    position: relative;
-    width: 100%;
-    background: $white;
-
-    .gallery-img {
-        width: 100%;
-        height: 526px;
-        overflow: hidden;
-
-        & > img {
-            width: 100%;
-            height: 526px;
-            object-fit: cover;
-        }
-    }
-}
-
-// ============================== Sự thánh thiện Salêdiêng ==============================
-.saints {
-    width: 100%;
-    height: 600px;
 }
 
 // ============================== Footer ==============================

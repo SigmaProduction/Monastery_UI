@@ -1,6 +1,8 @@
 $blue-navy: #052664;
+$blue-navy-light: #184E77;
 $blue: #2974B8;
 $white: #ffffff;
+$black: #070E12;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=STIX+Two+Text:wght@400;500;600&display=swap');
@@ -40,6 +42,10 @@ $breakpoints: (
 
 .p-0 {
     padding: 0;
+}
+
+.mt-26 {
+    margin-top: 26px;
 }
 
 .mb-20 {
@@ -136,6 +142,23 @@ body {
         box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
         transition: all 0.5s ease;
         background: $blue-navy;
+        color: $white;
+    }
+  }
+
+  .topic {
+    display: block;
+    font-family: 'STIX Two Text';
+    font-size: 60px;
+    line-height: 74px;
+    font-weight: 600;
+    color: $blue-navy;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 26px; 
+    z-index: 10;
+
+    &.topic--white {
         color: $white;
     }
   }
@@ -263,7 +286,7 @@ body {
     }
   }
 
-// ============================== About Us ==============================
+// ============================== gioi-thieu ==============================
 
 .about-wrap {
     position: relative;
@@ -374,5 +397,457 @@ body {
 
     .about-wrap__limit-cloud {
         width: 100%;
+    }
+}
+
+// ============================== bai-moi ==============================
+.new-post {
+    margin-bottom: 80px;
+}
+
+hr.hr-limited {
+    border-top: 0.5px solid $blue-navy;
+    margin: 16px auto;
+}
+
+.post__cart {
+    width: 100%;
+
+    &:hover {
+        .post__cart--img {
+            & > img {    
+                width: 100%;
+                height: 446px;
+                display: flex;
+                justify-content: center;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .post__cart--content {
+            color: $blue;
+        }
+
+    }
+
+    .post__cart--img {
+        width: 100%;
+        height: 346px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        overflow: hidden;
+        margin-bottom: 16px;
+
+        &.media__cart--img {
+            width: 100%;
+            height: 155px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            overflow: hidden;
+
+            & > img {
+                width: 265px;
+                height: 155px;
+                object-fit: cover;
+            }
+        }
+
+        &.podcast__post--img {
+            width: 100%;
+            height: 240px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            overflow: hidden;
+
+            & > img {
+                width: 100%;
+                height: 280px;
+                object-fit: cover;
+            }
+        }
+
+        & > img {
+            width: 100%;
+            height: 346px;
+            object-fit: cover;
+        }
+
+    }
+
+    .post__cart--tag {
+        width: calc(100% - 90% + 82px);
+        height: 26px;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+        text-align: center;
+        white-space: no-wrap;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $blue-navy;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 8px 16px;
+        margin-bottom: 10px;
+    }
+
+    .post__cart--content {
+        width: 100%;
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 600;
+        color: $black;
+
+        &.media__cart--content {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 600;
+            color: $black;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        &.podcast__cart--content {
+            display: flex;
+            align-items: center;
+
+            & > img {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+
+            .podcast__cart--description {
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 600;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                margin-bottom: 0px;
+            }
+
+        }
+    }
+}
+
+.post__list {
+    width: 100%;
+
+    & > ul {
+        padding: 0;
+        list-style: none;
+
+        li {margin-bottom: 26px;}
+    }
+
+    .item-cart {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            .item-cart__img {
+                & > img {
+                    width: 252px;
+                    height: 86px;
+                    display: flex;
+                    justify-content: center;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            .item-cart__content {
+                & > p { color: $blue; }
+            }
+        }
+
+        .item-cart__img {
+            width: 100%;
+            height: 86px;
+            overflow: hidden;
+            margin-right: 16px;
+
+            & > img {
+                width: 152px;
+                height: 86px;
+                object-fit: cover;
+            }
+        }
+
+        .item-cart__content--tag {
+            width: 82px;
+            height: 26px;
+            background: $blue-navy;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 500;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .item-cart__content {
+            & > p {
+                font-size: 20px;
+                line-height: 26px;
+                font-weight: 600;
+                color: $black;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}
+// ============================== Video - Podcast ==============================
+.media {
+    margin-bottom: 22%;
+}
+
+// ============================== Categories ==============================
+
+.categories-swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+        width: 420px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-pagination {
+        margin-top: 40px;
+    }
+}
+
+.categories {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background: $blue-navy-light;
+
+    .categories--topic {
+        margin-top: 80px;
+    }
+
+    .categories__rock {
+        position: absolute;
+        width: 100%;
+        height: 583px;
+        top: -50%;
+        left: 0;
+        background-image: url('../img/images/mountain.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .categories__mountain {
+        position: absolute;
+        top: 0;
+    }
+
+    .categories__cart {
+        width: 100%;
+        padding: 16px;
+        background:rgba(255, 255, 255, 0.5);
+
+        &:hover {
+            background: $white;
+            background: #FFF;
+            /* shadow-blue */
+            box-shadow: 5px 5px 10px 0px #3B8ABC, -5px -5px 10px 0px #3B8ABC;
+            transition: all 0.5s ease;
+        }
+
+        .categories__cart--post {
+            .post__img {
+                width: 100%;
+                height: 230px;
+                overflow: hidden;
+
+                & > img {
+                    width: 100%;
+                    height: 230px;
+                    object-fit: cover;
+                }
+            }
+
+            .post__content {
+                font-size: 22px;
+                line-height: 28px;
+                font-weight: 500;
+                color: $black;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+
+        .categories__cart--link {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 26px;
+            line-height: auto;
+            font-weight: 500;
+            color: $white;
+            background-color: $blue-navy;
+            border-radius: 40px;
+            padding: 4px 10px;
+            margin: auto;
+        
+            &:hover {
+                text-decoration: none;
+                box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
+                transition: all 0.5s ease;
+                background: $blue-navy;
+                color: $white;
+            }
+        }
+    }
+}
+
+// ============================== Gallery ==============================
+.gallery {
+    position: relative;
+    width: 100%;
+    background: $white;
+
+    .gallery-img {
+        width: 100%;
+        height: 526px;
+        overflow: hidden;
+
+        & > img {
+            width: 100%;
+            height: 526px;
+            object-fit: cover;
+        }
+    }
+}
+
+// ============================== Sự thánh thiện Salêdiêng ==============================
+.saints {
+    width: 100%;
+    height: 600px;
+}
+
+// ============================== Footer ==============================
+footer {
+    position: relative;
+    background-color: $blue-navy;
+    color: $white;
+    padding: 60px 0px;
+    
+    .footer {
+        .footer__scence {
+            position: absolute;
+            bottom: 100%;
+            width: 100%;
+            height: 170px;
+            background-image: url('../img/images/sceence-footer.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .footer__logo {
+            width: 100%;
+
+            & > img {
+                width: 100%;
+                height: 35px;
+                object-fit: contain;
+            }
+        }
+
+        .footer__list {
+            flex-grow: 0;
+
+            & > ul { padding: 0; }
+
+            &.footer__list--address {
+                margin-top: 26px;
+            }
+
+            &.footer__list--content {
+                & > ul {
+                    padding: 0;
+                }
+            }
+
+            &.footer__list--access {
+                & > ul {
+                    padding: 0;
+                }
+
+                & > ul li {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    color: $white;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li.item > a {
+                    display: flex;
+                    align-items: baseline;
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    color: $white;
+                    margin-bottom: 12px;
+
+                    .item__icon {
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .footer__title {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 30px;
+            color: $white;
+            margin-bottom: 18px;
+        }
+
+        .footer__img-flick {
+            width: 100%;
+            height: 240px;
+
+            & > img {
+                width: 100%;
+                height: 240px;
+                object-fit: cover;
+            }
+        }
     }
 }

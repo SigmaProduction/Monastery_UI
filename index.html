@@ -22,12 +22,11 @@
     <!-- ================================= Header ================================= -->
     <section>
       <div class="header-wrap">
-        <!-- navbar -->
         <div class="header-wrap__heading">
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
                   <a class="navbar-brand navbar-custom__logo" href="/">
                     <img src="./img/logo/logo-white.svg" alt="logo"/>
                   </a><!-- /.logo -->
@@ -131,15 +130,14 @@
                         </a>
                       </li>
                     </ul>
-                  </div>
-                </nav><!-- /.menu- -->
+                  </div><!-- /.menu- -->
               </div>
             </div>
           </div>
-        </div>
-        <!-- slide -->
+        </div><!-- /.navbar- -->
+
         <div class="row">
-          <div class="swiper mySwiper swiper-container">
+          <div class="swiper slide-swiper swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="swiper-zoom-container">
@@ -156,15 +154,17 @@
             <div class="swiper-button-next slider__button"></div>
             <div class="swiper-button-prev slider_button"></div>
           </div>
-        </div>
+        </div><!-- /.slide- -->
 
       </div>
     </section>
+    <!-- ================================= End - Header ================================= -->
 
     <!-- ================================= gioi-thieu ================================= -->
     <section>
       <div class="about-wrap">
         <div class="about-wrap__cloud"></div>
+        <div class="about-wrap__cloud--bottom"></div><!-- /.Cloud- -->
 
         <div class="about-wrap__dream-1" data-aos="fade-left" data-aos-duration="5000">
           <img src="./img/images/dream-1.png" alt="don-bosco" />
@@ -172,12 +172,12 @@
 
         <div class="about-wrap__dream-2" data-aos="fade-right" data-aos-duration="5000">
           <img src="./img/images/dream-2.png" alt="mazzelo" />
-        </div>
+        </div><!-- /.Dream- -->
 
         <div class="about-wrap__content">
           <div class="about-wrap__content--img-top" data-aos="fade-up">
             <img src="./img/images/marywithchild.png" alt="marywithchild" />
-          </div>
+          </div><!-- /.Maria component- -->
 
           <div class="about-wrap__content--title" data-aos="fade-up">
             Dòng Con Đức Mẹ Phù Hộ
@@ -194,9 +194,10 @@
 
         <div class="about-wrap__creators" data-aos="fade-in">
           <img src="img/images/creators.png" alt="creators" />
-        </div>
+        </div><!-- /.creators- -->
       </div>
     </section>
+    <!-- ================================= End - gioi-thieu ================================= -->
 
     <!-- ================================= bai-moi ================================= -->
     <section>
@@ -281,15 +282,15 @@
                 </ul>
               </div>
 
-              <a class="about-wrap__content--more btn-more" href="#" data-aos="fade-up">
+              <a class="post__cart--more btn-more" href="#" data-aos="fade-up">
                 Xem Thêm
               </a>
-            </div>
+            </div><!-- /.news- -->
 
             <!-- mega posts -->
             <div class="col-md-6" data-aos="fade-up">
               <a href="#">
-                <div class="post__cart">
+                <div class="post__cart post__cart--mega">
                   <div class="post__cart--img">
                     <img src="./img/images/IMG-1.png" alt="post" />
                   </div>
@@ -299,7 +300,7 @@
               </a>
 
               <a href="#">
-                <div class="post__cart">
+                <div class="post__cart post__cart--mega">
                   <div class="post__cart--img">
                     <img src="./img/images/IMG-1.png" alt="post" />
                   </div>
@@ -312,11 +313,12 @@
                 Xem Thêm
               </a>
 
-            </div>
+            </div><!-- /.mega posts- -->
           </div>
         </div>
       </div>
     </section>
+    <!-- ================================= End - bai moi ================================= -->
 
     <!-- ================================= Video - Podcast ================================= -->
     <section>
@@ -407,6 +409,7 @@
         </div>
       </div>
     </section>
+    <!-- ================================= End - Video - Podcast ================================= -->
 
     <!-- ================================= Chuyên Mục ================================= -->
     <section>
@@ -546,7 +549,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="swiper-pagination"></div>
                 </div>
               </div>
@@ -554,6 +556,7 @@
         </div>
       </div>
     </section>
+    <!-- ================================= End - Chuyên Mục ================================= -->
 
     <!-- ================================= Lời chúa ================================= -->
     <section>
@@ -579,11 +582,225 @@
         </div>
       </div>
     </section>
-    
+    <!-- ================================= End - Lời chúa ================================= -->
+
     <!-- ============================== Sự thánh thiện Salêdiêng ============================== -->
     <section>
-      <div class="saints"></div>
+      <div class="saints">
+        <div class="container">
+          <div class="row">
+            <h3 class="topic categories--topic" data-aos="fade-up">Chuyên Mục</h3>
+            <div class="col-md-12">
+              <!-- Month -->
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month active" id="pills-home-tab" data-toggle="pill" data-target="#thang1" type="button" role="tab" aria-controls="thang1" aria-selected="true"> Tháng 1</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-profile-tab" data-toggle="pill" data-target="#thang2" type="button" role="tab" aria-controls="#thang2" aria-selected="false">Tháng 2</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang3" type="button" role="tab" aria-controls="#thang3" aria-selected="false">Tháng 3</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 4</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 5</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 6</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 7</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 8</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 9</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 10</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 11</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link nav-month" id="pills-contact-tab" data-toggle="pill" data-target="#thang4" type="button" role="tab" aria-controls="#thang4" aria-selected="false">Tháng 12</button>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="thang1" role="tabpanel">
+                  <!-- content -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="saints__card" id="collapseExample">
+                        <div class="saints__card--content">
+                          <div class="content--date">Match 8</div>
+                          <div class="content--title">Thánh Gioan Bosco</div>
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <!-- Swiper -->
+                      <div class="saints-swiper swiper swiper-container-multirow-column">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Donbosco.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Thánh Gioan Bosco</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Titozeman.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước Ti-tô Zeman</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/luyVariana.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước Lu-y Variara</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Lauravicuna.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước Laura Vicuna</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Lauravicuna.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước Laura Vicuna</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Donbosco.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước 
+                                  PHAN-XI-CÔ SA-LÊ</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/phanxicosale.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước 
+                                  PHAN-XI-CÔ SA-LÊ</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Lauravicuna.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước Laura Vicuna</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/phanxico.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Chân Phước 
+                                  PHAN-XI-CÔ SA-LÊ</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Donbosco.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Thánh Gioan Bosco</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#">
+                              <div class="saints-sub__card">
+                                <div class="saints-sub__card--img">
+                                  <img src="./img/images/Donbosco.png" alt="donbosco" />
+                                </div>
+
+                                <div class="saints-sub__card--title">Thánh Gioan Bosco</div>
+                                <div class="saints-sub__card--date">(Match 18)</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="thang2" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+                <div class="tab-pane fade" id="thang3" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                <div class="tab-pane fade" id="thang4" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- ================================= End - Sự thánh thiện Salêdiêng ================================= -->
 
     <!-- footer -->
     <section>
@@ -677,10 +894,11 @@
 
             </div>
           </div>
+          <hr class="limited-footer" />
+          <div class="footer-copyright">Copyright © 2023 Dòng Con Đức Mẹ Phù Hộ</div>
         </div>
       </footer>
     </section>
-
 
     <!--jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -694,9 +912,12 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Initialize Swiper -->
     <script>
-      AOS.init();
+      AOS.init({
+        delay: 20, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+      });
 
-      var swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper(".slide-swiper", {
         loop: true,
         pagination: {
           el: ".swiper-pagination",
@@ -726,6 +947,22 @@
         },
       });
 
+      var swiper = new Swiper(".saints-swiper", {
+        slidesPerView: 3,
+        slidesPerColumnFill: 'row',
+        grid: {
+          rows: 2,
+        },
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
     // <!-- Initialize Button to top website -->
       var btn = $('#button-top');
 
@@ -740,35 +977,6 @@
       btn.on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({scrollTop:0}, '300');
-      });
-
-      $(document).ready(function(){
-        // Call the event handler on #skills
-        $("#skills").hover(function() {
-          $("#skills").addClass("active");
-        },
-
-        function(){
-          $("#skills").removeClass("active");
-        });
-
-        // Call the event handler on #business
-        $("#business").hover(function() {
-          $("#business").addClass("active");
-        },
-
-        function(){
-          $("#business").removeClass("active");
-        });
-
-        // Call the event handler on #business
-        $("#goal").hover(function(){
-          $("#goal").addClass("active");
-        },
-             
-        function(){
-          $("#goal").removeClass("active");
-        });
       });
     </script>
   </body>

@@ -4,6 +4,7 @@ $blue: #2974B8;
 $white: #ffffff;
 $black: #070E12;
 $grey: #49565C;
+$yellow: #FBCD22;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=STIX+Two+Text:wght@400;500;600&display=swap');
@@ -82,6 +83,8 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    position: relative;
+    height: 100%;
 }
 
 // =============== button ===============
@@ -138,6 +141,21 @@ body {
     padding: 8px 20px;
     margin: auto;
 
+    @include res_for(sp) {  
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: auto;
+        font-weight: 500;
+        color: $white;
+        background-color: $blue;
+        border-radius: 10px;
+        padding: 4px 10px;
+    }
+
     &:hover {
         text-decoration: none;
         box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
@@ -157,7 +175,14 @@ body {
     text-align: center;
     margin: auto;
     margin-bottom: 26px; 
-    z-index: 10;
+    margin-top: 20px;
+    z-index: 5;
+
+    @include res_for(sp) {  
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 600;
+    }
 
     &.topic--white {
         color: $white;
@@ -171,6 +196,9 @@ body {
     height: 100%;
     position: relative;
 
+    @include res_for(sp) {  
+        overflow-x: hidden;
+    }
 
     .header-wrap__heading {
         width: 100%;
@@ -180,6 +208,11 @@ body {
         border-bottom-left-radius: 20px;
         position: fixed;
         z-index: 10;
+
+        @include res_for(sp) {  
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
     }
 
     .heading__post {
@@ -251,6 +284,10 @@ body {
         align-items: baseline;
         padding: 20px 0px;
 
+        @include res_for(sp) {  
+            padding: 10px 0px;
+        }
+
         .navbar-custom__logo {
             height: 30px;
             object-fit: cover;
@@ -267,6 +304,11 @@ body {
                 display: flex;
                 align-items: center;
                 padding: 0px 4px;
+
+                @include res_for(sp) {  
+                    display: block;
+                    transition: all 0.5s ease-in;
+                }
 
                 & > .nav-link { 
                     font-size: 14px;
@@ -337,6 +379,10 @@ body {
         font-variant: initial;
         line-height: 1;
         color: $white;
+
+        @include res_for(sp) {  
+            font-size: 20px;
+        }
     }
 
     .swiper-button-next {
@@ -345,6 +391,13 @@ body {
 
     .swiper-button-prev {
         margin-left: 20px;
+    }
+
+    .slider_button {
+        @include res_for(sp) {  
+            width: 30px;
+            height: 30px;
+        } 
     }
   }
   
@@ -361,6 +414,15 @@ body {
     background-repeat: repeat-y;
     padding: 120px;
 
+
+    @include res_for(sp) {  
+        overflow-x: hidden;
+    }
+
+    @include res_for(sp) {  
+        padding: 80px;
+    } 
+
     .about-wrap__cloud {
         position: absolute;
         width: 100%;
@@ -372,7 +434,13 @@ body {
         background-position: center;
         background-repeat: repeat-x;
         z-index: 2;
-        animation: wind 50s linear infinite;
+        animation: wind 100s linear infinite;
+
+        @include res_for(sp) {  
+            height: 162px;
+            top: -10%;
+            left: 0;
+        } 
     }
 
     @keyframes wind{
@@ -385,15 +453,43 @@ body {
         }
       
       }
+    
+    .about-wrap__cloud--bottom {
+        position: absolute;
+        width: 100%;
+        height: 362px;
+        bottom: -9%;
+        left: 0;
+        background-image: url('../img/images/Clouds-float.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat-x;
+        z-index: 2;
+
+        @include res_for(sp) {  
+            height: 162px;
+            bottom: -9%;
+        } 
+    }
 
     .about-wrap__dream-1, .about-wrap__dream-2 {
         width: 650px;
         height: 650px;
 
+        @include res_for(sp) {  
+            width: 220px;
+            height: 220px;
+        } 
+
         & > img {
             width: 650px;
             height: 650px;
             object-fit: contain; 
+
+            @include res_for(sp) {  
+                width: 220px;
+                height: 220px;
+            } 
         }
     }
 
@@ -403,6 +499,11 @@ body {
         top: 10%;
         transform: translateY(10%);
         z-index: 5;
+
+        @include res_for(sp) {  
+            left: -20%;
+            top: 3%;
+        } 
     }
 
     .about-wrap__dream-2 {
@@ -411,6 +512,11 @@ body {
         top: 10%;
         transform: translateY(10%);
         z-index: 5;
+
+        @include res_for(sp) {  
+            right: -20%;
+            top: 3%;
+        } 
     }
 
     .about-wrap__content--img-top {
@@ -419,9 +525,17 @@ body {
         height: 200px;
         margin-bottom: 20px;
 
+        @include res_for(sp) {  
+            height: 100px;
+        } 
+
         & > img {
             height: 200px;
             object-fit: contain;
+
+            @include res_for(sp) {  
+                height: 100px;
+            } 
         }
     }
 
@@ -432,6 +546,12 @@ body {
         font-family: 'STIX Two Text';
         color: $blue-navy;
         text-align: center;
+
+        @include res_for(sp) {  
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 700;
+        } 
     }
 
     .about-wrap__content--description {
@@ -442,10 +562,20 @@ body {
         line-height: 36px;
         text-align: justify;
         margin: 20px auto;
+
+        @include res_for(sp) {  
+            width: 100%;
+            font-size: 16px;
+            line-height: 22px;
+        } 
     }
 
     .about-wrap__content--more {
         margin-bottom: 80px;
+
+        @include res_for(sp) {  
+            margin-bottom: 40px;
+        } 
     }
 
     .about-wrap__creators {
@@ -453,8 +583,16 @@ body {
         justify-content: center;
         height: 484px;
 
+        @include res_for(sp) {  
+            height: 200px;
+        } 
+
         & > img {
             height: 484px;
+
+            @include res_for(sp) {  
+                height: 200px;
+            } 
         }
     }
 
@@ -466,6 +604,16 @@ body {
 // ============================== bai-moi ==============================
 .new-post {
     margin-bottom: 80px;
+
+    @include res_for(sp) {  
+        margin-bottom: 40px;
+    } 
+
+    .post__cart--more {
+        @include res_for(sp) {  
+            margin-bottom: 40px;
+        } 
+    }
 }
 
 hr.hr-limited {
@@ -475,6 +623,10 @@ hr.hr-limited {
 
 .post__cart {
     width: 100%;
+
+    &.post__cart--mega {
+        margin-bottom: 26px;
+    }
 
     &:hover {
         .post__cart--img {
@@ -501,6 +653,12 @@ hr.hr-limited {
         overflow: hidden;
         margin-bottom: 16px;
 
+        @include res_for(sp) {  
+            height: 246px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        } 
+
         &.media__cart--img {
             width: 100%;
             height: 155px;
@@ -522,10 +680,20 @@ hr.hr-limited {
             border-bottom-left-radius: 20px;
             overflow: hidden;
 
+            @include res_for(sp) {  
+                height: 180px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            } 
+
             & > img {
                 width: 100%;
                 height: 280px;
                 object-fit: cover;
+
+                @include res_for(sp) {  
+                    height: 180px;
+                } 
             }
         }
 
@@ -533,6 +701,10 @@ hr.hr-limited {
             width: 100%;
             height: 346px;
             object-fit: cover;
+
+            @include res_for(sp) {  
+                height: 246px;
+            } 
         }
 
     }
@@ -554,6 +726,20 @@ hr.hr-limited {
         border-bottom-left-radius: 10px;
         padding: 8px 16px;
         margin-bottom: 10px;
+
+        @include res_for(sp) {  
+            width: calc(100% - 90% + 62px);
+            height: 20px;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 600;
+            text-align: center;
+            white-space: no-wrap;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            padding: 4px 8px;
+            margin-bottom: 8px;
+        } 
     }
 
     .post__cart--content {
@@ -562,6 +748,16 @@ hr.hr-limited {
         line-height: 26px;
         font-weight: 600;
         color: $black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        @include res_for(sp) {  
+            font-size: 18px;
+            line-height: 22px;
+        }
 
         &.media__cart--content {
             font-size: 16px;
@@ -583,6 +779,11 @@ hr.hr-limited {
                 width: 40px;
                 height: 40px;
                 margin-right: 10px;
+
+                @include res_for(sp) {  
+                    width: 30px;
+                    height: 30px;
+                }
             }
 
             .podcast__cart--description {
@@ -595,6 +796,12 @@ hr.hr-limited {
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
                 margin-bottom: 0px;
+
+                @include res_for(sp) {  
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
+                }
             }
 
         }
@@ -608,7 +815,13 @@ hr.hr-limited {
         padding: 0;
         list-style: none;
 
-        li {margin-bottom: 26px;}
+        li {
+            margin-bottom: 26px;
+
+            @include res_for(sp) {  
+                margin-bottom: 16px;
+            }
+        }
     }
 
     .item-cart {
@@ -623,6 +836,10 @@ hr.hr-limited {
                     display: flex;
                     justify-content: center;
                     transition: all 0.5s ease;
+
+                    @include res_for(sp) {  
+                        height: 66px;
+                    }
                 }
             }
 
@@ -637,10 +854,18 @@ hr.hr-limited {
             overflow: hidden;
             margin-right: 16px;
 
+            @include res_for(sp) {  
+                height: 66px;
+            }
+
             & > img {
                 width: 152px;
                 height: 86px;
                 object-fit: cover;
+
+                @include res_for(sp) {  
+                    height: 66px;
+                }
             }
         }
 
@@ -658,6 +883,22 @@ hr.hr-limited {
             border-top-right-radius: 10px;
             border-bottom-left-radius: 10px;
             margin-bottom: 10px;
+
+            @include res_for(sp) {  
+                width: 82px;
+                height: 22px;
+                background: $blue-navy;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 500;
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+                margin-bottom: 8px;
+            }
         }
 
         .item-cart__content {
@@ -671,6 +912,12 @@ hr.hr-limited {
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
+
+                @include res_for(sp) {  
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -680,7 +927,7 @@ hr.hr-limited {
     margin-bottom: 22%;
 }
 
-// ============================== Categories ==============================
+// ============================== Chuyen-muc / Categories ==============================
 
 .categories-swiper {
     width: 100%;
@@ -704,8 +951,27 @@ hr.hr-limited {
     height: 650px;
     background: $blue-navy-light;
 
+    @include res_for(sp) {  
+        width: 100%;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .swiper-wrapper{
+        padding-bottom: 80px;
+    }
+    
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 10px !important;
+    }
+
     .categories--topic {
         margin-top: 80px;
+
+        @include res_for(sp) {  
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
     }
 
     .categories__rock {
@@ -719,6 +985,12 @@ hr.hr-limited {
         background-position: center;
         background-repeat: no-repeat;
         z-index: 1;
+
+        @include res_for(sp) {  
+            width: 100%;
+            height: 150px;
+            top: -10%;
+        }
     }
 
     .categories__mountain {
@@ -730,6 +1002,10 @@ hr.hr-limited {
         width: 100%;
         padding: 16px;
         background:rgba(255, 255, 255, 0.5);
+
+        @include res_for(sp) {  
+            padding: 8px; 
+        }
 
         &:hover {
             background: $white;
@@ -745,10 +1021,20 @@ hr.hr-limited {
                 height: 230px;
                 overflow: hidden;
 
+                @include res_for(sp) {  
+                    width: 100%;
+                    height: 180px;
+                }
+
                 & > img {
                     width: 100%;
                     height: 230px;
                     object-fit: cover;
+
+                    @include res_for(sp) {  
+                        width: 100%;
+                        height: 180px;
+                    }
                 }
             }
 
@@ -762,6 +1048,12 @@ hr.hr-limited {
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
+
+                @include res_for(sp) {  
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 500;
+                }
             }
         }
 
@@ -779,6 +1071,13 @@ hr.hr-limited {
             border-radius: 40px;
             padding: 4px 10px;
             margin: auto;
+
+            @include res_for(sp) {  
+                font-size: 20px;
+                line-height: auto;
+                font-weight: 500;
+                padding: 4px 8px;
+            }
         
             &:hover {
                 text-decoration: none;
@@ -797,15 +1096,36 @@ hr.hr-limited {
     width: 100%;
     background: $white;
 
+    @include res_for(sp) {  
+        overflow-x: hidden;
+    }
+
+    .gallery-swiper {
+        @include res_for(sp) {  
+            overflow-x: hidden;
+        }
+    }
+
     .gallery-img {
         width: 100%;
         height: 526px;
         overflow: hidden;
+        
+        @include res_for(sp) {  
+            width: 100%;
+            height: 180px;
+            overflow-x: hidden;
+        }
 
         & > img {
             width: 100%;
             height: 526px;
             object-fit: cover;
+
+            @include res_for(sp) {  
+                width: 100%;
+                height: 180px;
+            }
         }
     }
 }
@@ -813,7 +1133,184 @@ hr.hr-limited {
 // ============================== Sự thánh thiện Salêdiêng ==============================
 .saints {
     width: 100%;
-    height: 600px;
+    background-image: url('../img/images/bg-saledieng.png');
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+
+    @include res_for(sp) {  
+        padding: 40px 0;
+    }
+
+    .swiper-container-multirow-column > .swiper-wrapper {
+        flex-direction: row;
+        align-items: center;
+
+        .swiper-slide {
+            margin-top: 0px !important;
+        }
+    }
+
+    .nav-month {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue-navy;
+        border-radius: 40px;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+        color: $white;
+        white-space: nowrap;
+        padding: 6px 8px;
+        margin-right: 14px;
+
+        @include res_for(sp) {  
+            margin-bottom: 10px;
+            padding: 4px 8px;
+        }
+
+        &.nav-link.active {
+            background-color: $blue;
+        }
+    }
+
+    .saints__card {
+        position: relative;
+        width: 100%;
+        height: 570px;
+        background-image: url('../img/images/Donbosco.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+
+        @include res_for(sp) {  
+            margin-bottom: 10px;
+            padding: 4px 8px;
+        }
+
+        &:hover {
+            .saints__card--content {
+                color: $blue;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .saints__card--content {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(197deg, rgba(5, 38, 100, 0.00) 16.4%, rgba(0, 0, 0, 0.90) 57.91%);
+            color: $white;
+            padding: 16px;
+
+            .content--date {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+            
+            .content--title {
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+            }
+
+            & > p {
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+
+    .saints-sub__card {
+        width: 100%;
+        margin-bottom: 16px;
+
+        &:hover {
+            .saints-sub__card--img {
+                & > img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 480px;
+                    transition: all 0.5s ease; 
+                }
+            }
+
+            .saints-sub__card--title, .saints-sub__card--date {
+                color: $blue;
+            }
+        }
+
+        .saints-sub__card--img {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            margin-bottom: 16px;
+
+            @include res_for(sp) {  
+                height: 160px; 
+            }
+
+            & > img {
+                width: 100%;
+                height: 280px;
+                object-fit: cover;
+
+                @include res_for(sp) {  
+                    height: 160px; 
+                }
+            }
+        }
+
+        .saints-sub__card--title {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 22px;
+            color: $black;
+            margin-bottom: 8px;
+
+            @include res_for(sp) {  
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px;
+            }
+        }
+
+        .saints-sub__card--date {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            color: $black;
+
+            @include res_for(sp) {  
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+        }
+    }
 }
 
 // ============================== Footer ==============================
@@ -822,6 +1319,32 @@ footer {
     background-color: $blue-navy;
     color: $white;
     padding: 60px 0px;
+
+    @include res_for(sp) {  
+        padding: 40px 0px;
+    }
+
+    hr.limited-footer {
+        border-top: 1px solid $yellow !important;
+        margin: 16px auto;
+    }
+
+    .footer-copyright {
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 0px auto;
+
+        @include res_for(sp) {  
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+            margin-top: 20px;
+        }
+    }
     
     .footer {
         .footer__scence {
@@ -833,6 +1356,11 @@ footer {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            @include res_for(sp) {  
+                height: 140px;
+                bottom: 99%;
+            }
         }
 
         .footer__logo {
@@ -866,9 +1394,9 @@ footer {
                 }
 
                 & > ul li {
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 400;
-                    line-height: 30px;
+                    line-height: 26px;
                     color: $white;
                 }
             }
@@ -906,10 +1434,20 @@ footer {
             width: 100%;
             height: 240px;
 
+            @include res_for(sp) {  
+                height: 120px;
+                margin-bottom: 40px;
+            }
+
             & > img {
                 width: 100%;
                 height: 240px;
                 object-fit: cover;
+
+                @include res_for(sp) {  
+                    height: 120px;
+                    margin-bottom: 40px;
+                }
             }
         }
     }

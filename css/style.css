@@ -399,8 +399,7 @@ body {
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .about-wrap .about-wrap__cloud--bottom {
-    height: 162px;
-    bottom: -9%;
+    display: none;
   }
 }
 .about-wrap .about-wrap__dream-1, .about-wrap .about-wrap__dream-2 {
@@ -556,7 +555,7 @@ hr.hr-limited {
   width: 100%;
 }
 .post__cart.post__cart--mega {
-  margin-bottom: 26px;
+  margin-bottom: 40px;
 }
 .post__cart:hover .post__cart--img > img {
   width: 100%;

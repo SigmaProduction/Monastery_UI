@@ -467,8 +467,7 @@ body {
         z-index: 2;
 
         @include res_for(sp) {  
-            height: 162px;
-            bottom: -9%;
+            display: none;
         } 
     }
 
@@ -625,7 +624,7 @@ hr.hr-limited {
     width: 100%;
 
     &.post__cart--mega {
-        margin-bottom: 26px;
+        margin-bottom: 40px;
     }
 
     &:hover {

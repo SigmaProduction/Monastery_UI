@@ -161,6 +161,8 @@ body {
 }
 .header-mega .header-mega__logo {
   height: 30px;
+  position: absolute;
+  left: 120px;
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .header-mega .header-mega__logo {

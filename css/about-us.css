@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=STIX+Two+Text:wght@400;500;600&display=swap");
+@font-face {
+  font-family: "STIX Two Text";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=STIX+Two+Text:wght@400;500;600&display=swap") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap") format("truetype");
+}
+.m-auto {
+  margin: auto;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.mt-26 {
+  margin-top: 26px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+#button-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF9800;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button-top > img {
+  width: 26px;
+}
+#button-top:hover {
+  cursor: pointer;
+  background-color: #333;
+  transition: all 0.5s ease;
+}
+#button-top:active {
+  background-color: #555;
+}
+#button-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-more {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: auto;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2974B8;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin: auto;
+}
+.btn-more:hover {
+  text-decoration: none;
+  box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
+  transition: all 0.5s ease;
+  background: #052664;
+  color: #ffffff;
+}
+
+.topic {
+  display: block;
+  font-family: "STIX Two Text";
+  font-size: 60px;
+  line-height: 74px;
+  font-weight: 600;
+  color: #052664;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 26px;
+  z-index: 10;
+}
+.topic.topic--white {
+  color: #ffffff;
+}
+
+.mega-about {
+  /* Full height */
+  height: 100%;
+  /* The image used */
+  background-image: url("../img/images/bg-about-us.png");
+  /* Create the parallax scrolling effect */
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.mega-about .description--flying {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .description--flying {
+    padding: 40px 0;
+  }
+}
+.mega-about .description--flying .flying--left {
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .description--flying .flying--left {
+    left: -280px;
+    overflow-x: hidden;
+  }
+}
+.mega-about .description--flying .flying--right {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .description--flying .flying--right {
+    right: -280px;
+    overflow-x: hidden;
+  }
+}
+.mega-about .limited {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .limited {
+    padding: 40px 0;
+  }
+}
+.mega-about .limited .limited--left {
+  position: absolute;
+  left: 0;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .limited .limited--left {
+    left: -350px;
+    overflow-x: hidden;
+  }
+}
+.mega-about .limited .limited--right {
+  position: absolute;
+  right: 0;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .limited .limited--right {
+    right: -350px;
+    overflow-x: hidden;
+  }
+}
+.mega-about .mega-about__description {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.mega-about .mega-about__description .description__img {
+  height: 468px;
+  overflow: hidden;
+  margin: auto;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .mega-about__description .description__img {
+    height: 268px;
+  }
+}
+.mega-about .mega-about__description .description__img > img {
+  height: 468px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .mega-about__description .description__img > img {
+    height: 268px;
+  }
+}
+.mega-about .mega-about__description .description__sub {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #2974B8;
+  text-align: center;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .mega-about__description .description__sub {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
+.mega-about .mega-about__description .description__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  color: #070E12;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .mega-about__description .description__title {
+    width: 100%;
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 600;
+    padding: 0 10px;
+  }
+}
+.mega-about .mega-about__description .description__content {
+  width: 50%;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #070E12;
+  text-align: justify;
+  margin: auto;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .mega-about__description .description__content {
+    width: 80%;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 40px;
+  }
+}
+.mega-about .mega-about__content {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .mega-about__content {
+    margin-bottom: 40px;
+  }
+}
+.mega-about .mega-about__content > p {
+  padding: 10px;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about .mega-about__content > p {
+    width: 80% !important;
+  }
+}/*# sourceMappingURL=about-us.css.map */

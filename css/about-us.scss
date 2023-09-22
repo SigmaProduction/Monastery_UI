@@ -1,0 +1,342 @@
+$blue-navy: #052664;
+$blue-navy-light: #184E77;
+$blue: #2974B8;
+$white: #ffffff;
+$black: #070E12;
+$grey: #49565C;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=STIX+Two+Text:wght@400;500;600&display=swap');
+
+// STIX Two Text
+@font-face {
+    font-family: 'STIX Two Text';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=STIX+Two+Text:wght@400;500;600&display=swap') format('truetype');
+}
+
+// Roboto
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap') format('truetype');
+}
+
+// ============== Settings responsive ===============
+$breakpoints: (
+  'pc': 'screen and (min-width: 769px)',
+  'sp': 'screen and (min-width: 310px) and (max-width: 768px)',
+  'mini-tablet': 'screen and (min-width: 768px) and (max-width: 1024px)',
+  'tablet': 'screen and (min-width: 1025px) and (max-width: 1280px)'
+
+) !default;
+
+@mixin res_for($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// ============== Spacing ===============
+
+.m-auto {
+    margin: auto;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.mt-26 {
+    margin-top: 26px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+// =============== button ===============
+
+#button-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF9800;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+
+    & > img {
+        width: 26px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #333;
+        transition: all 0.5s ease;
+    }
+
+    &:active {
+        background-color: #555;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+  }
+
+  .btn-more {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: auto;
+    font-weight: 500;
+    color: $white;
+    background-color: $blue;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: auto;
+
+    &:hover {
+        text-decoration: none;
+        box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
+        transition: all 0.5s ease;
+        background: $blue-navy;
+        color: $white;
+    }
+  }
+
+  .topic {
+    display: block;
+    font-family: 'STIX Two Text';
+    font-size: 60px;
+    line-height: 74px;
+    font-weight: 600;
+    color: $blue-navy;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 26px; 
+    z-index: 10;
+
+    &.topic--white {
+        color: $white;
+    }
+  }
+
+// =============== about us - content ===============
+
+.mega-about {
+    /* Full height */
+    height: 100%;
+    /* The image used */
+    background-image: url('../img/images/bg-about-us.png');
+
+    /* Create the parallax scrolling effect */
+    background-position: top;
+    background-repeat: repeat-y;
+    background-size: cover;
+    overflow-x: hidden;
+
+    .description--flying {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+
+        @include res_for(sp) { 
+            padding: 40px 0;
+        }
+
+        .flying--left {
+            position: absolute;
+            top: 40px;
+            left: 0;
+
+            @include res_for(sp) { 
+                left: -280px;
+                overflow-x: hidden;
+            }
+        }
+
+        .flying--right {
+            position: absolute;
+            top: 40px;
+            right: 0;
+
+            @include res_for(sp) { 
+                right: -280px;
+                overflow-x: hidden;
+            }
+        }
+    }
+
+    .limited {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+
+        @include res_for(sp) { 
+            padding: 40px 0;
+        }
+
+        .limited--left {
+            position: absolute;
+            left: 0;
+
+            @include res_for(sp) { 
+                left: -350px;
+                overflow-x: hidden;
+            }
+        }
+
+        .limited--right {
+            position: absolute;
+            right: 0;
+
+            @include res_for(sp) { 
+                right: -350px;
+                overflow-x: hidden;
+            }
+        }
+    }
+
+    .mega-about__description {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .description__img {
+            height: 468px;
+            overflow: hidden; 
+            margin: auto;
+
+            @include res_for(sp) { 
+                height: 268px;
+            }
+
+            & > img {
+                height: 468px;
+                object-fit: cover;
+
+                @include res_for(sp) { 
+                    height: 268px;
+                }
+            }
+        }
+
+        .description__sub {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 40px;
+            color: $blue;
+            text-align: center;
+            margin-bottom: 16px;
+
+            @include res_for(sp) { 
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 30px;
+            }
+        }
+
+        .description__title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 52px;
+            color: $black;
+            text-align: center;
+            margin-bottom: 30px;
+
+            @include res_for(sp) { 
+                width: 100%;
+                font-size: 38px;
+                line-height: 46px;
+                font-weight: 600;
+                padding: 0 10px;
+            }
+        }
+
+        .description__content {
+            width: 50%;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 38px; 
+            color: $black;
+            text-align: justify;
+            margin: auto;
+            margin-bottom: 80px;
+
+            @include res_for(sp) { 
+                width: 80%;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 38px; 
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .mega-about__content {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 80px;
+
+        @include res_for(sp) { 
+            margin-bottom: 40px;
+        }
+
+        & > p {
+            padding: 10px;
+            
+            @include res_for(sp) { 
+                width: 80% !important;
+            } 
+        }
+    }
+}

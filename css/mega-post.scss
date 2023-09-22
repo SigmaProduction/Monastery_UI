@@ -203,6 +203,8 @@ body {
 
     .header-mega__logo {
         height: 30px;
+        position: absolute;
+        left: 120px;
 
         @include res_for(sp) { 
             display: none;

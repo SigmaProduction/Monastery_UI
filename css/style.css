@@ -373,7 +373,7 @@ body {
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .about-wrap .about-wrap__cloud {
     height: 162px;
-    top: -10%;
+    bottom: -10%;
     left: 0;
   }
 }
@@ -1056,6 +1056,13 @@ hr.hr-limited {
 .saints .swiper-container-multirow-column > .swiper-wrapper .swiper-slide {
   margin-top: 0px !important;
 }
+.saints .saints__month {
+  width: 100%;
+  overflow-x: auto;
+}
+.saints .saints__month > ul {
+  flex-wrap: nowrap;
+}
 .saints .nav-month {
   display: flex;
   justify-content: center;
@@ -1067,8 +1074,8 @@ hr.hr-limited {
   font-weight: 500;
   color: #ffffff;
   white-space: nowrap;
-  padding: 6px 8px;
-  margin-right: 14px;
+  padding: 8px 12px !important;
+  margin-right: 12px;
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .saints .nav-month {

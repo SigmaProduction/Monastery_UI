@@ -438,7 +438,7 @@ body {
 
         @include res_for(sp) {  
             height: 162px;
-            top: -10%;
+            bottom: -10%;
             left: 0;
         } 
     }
@@ -1156,6 +1156,15 @@ hr.hr-limited {
         }
     }
 
+    .saints__month {
+        width: 100%;
+        overflow-x: auto;
+
+        & > ul {
+            flex-wrap: nowrap;
+        }
+    }
+
     .nav-month {
         display: flex;
         justify-content: center;
@@ -1167,8 +1176,8 @@ hr.hr-limited {
         font-weight: 500;
         color: $white;
         white-space: nowrap;
-        padding: 6px 8px;
-        margin-right: 14px;
+        padding: 8px 12px !important;
+        margin-right: 12px;
 
         @include res_for(sp) {  
             margin-bottom: 10px;

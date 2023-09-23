@@ -201,6 +201,7 @@ body {
             background-size: contain;
 
             @include res_for(sp) {  
+                min-height: 350px;
                 height: 310px;
                 background-size: cover;
                 background-position: center center;
@@ -248,11 +249,12 @@ body {
                 transform: translate(-50%, -65%);
 
                 @include res_for(sp) {  
-                    top: 68%;
+                    top: 60%;
                     left: 50%;
                 } 
 
                 .breadcrumb {
+                    flex-wrap: nowrap;
                     background: none;
 
                     & > li {
@@ -261,7 +263,7 @@ body {
                         font-weight: 500;
 
                         @include res_for(sp) {  
-                            font-size: 18px;
+                            font-size: 13px;
                             font-weight: 500;
                             line-height: auto;
                         } 

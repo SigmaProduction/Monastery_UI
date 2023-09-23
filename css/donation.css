@@ -138,7 +138,9 @@ body {
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .donation {
-    padding: 80px 0px;
+    background-attachment: inherit;
+    padding: 0px;
+    padding-bottom: 80px;
   }
 }
 .donation .donation__title {

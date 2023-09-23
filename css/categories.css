@@ -156,6 +156,7 @@ body {
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .header-wrap .heading__post .heading__post--img {
+    min-height: 350px;
     height: 310px;
     background-size: cover;
     background-position: center center;
@@ -202,11 +203,12 @@ body {
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .header-wrap .heading__post .heading__post--img .heading__post--breadcrumb {
-    top: 68%;
+    top: 60%;
     left: 50%;
   }
 }
 .header-wrap .heading__post .heading__post--img .heading__post--breadcrumb .breadcrumb {
+  flex-wrap: nowrap;
   background: none;
 }
 .header-wrap .heading__post .heading__post--img .heading__post--breadcrumb .breadcrumb > li {
@@ -216,7 +218,7 @@ body {
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .header-wrap .heading__post .heading__post--img .heading__post--breadcrumb .breadcrumb > li {
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 500;
     line-height: auto;
   }

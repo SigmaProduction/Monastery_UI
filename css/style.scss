@@ -1200,6 +1200,7 @@ hr.hr-limited {
         border-radius: 20px;
 
         @include res_for(sp) {  
+            height: 460px;
             margin-bottom: 10px;
             padding: 4px 8px;
         }

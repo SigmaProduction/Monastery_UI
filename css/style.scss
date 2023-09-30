@@ -1158,7 +1158,10 @@ hr.hr-limited {
 
     .saints__month {
         width: 100%;
-        overflow-x: auto;
+
+        @include res_for(sp) {  
+            overflow-x: auto;
+        }
 
         & > ul {
             flex-wrap: nowrap;
@@ -1177,7 +1180,7 @@ hr.hr-limited {
         color: $white;
         white-space: nowrap;
         padding: 8px 12px !important;
-        margin-right: 12px;
+        margin-right: 10px;
 
         @include res_for(sp) {  
             margin-bottom: 10px;

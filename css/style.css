@@ -1058,7 +1058,11 @@ hr.hr-limited {
 }
 .saints .saints__month {
   width: 100%;
-  overflow-x: auto;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .saints .saints__month {
+    overflow-x: auto;
+  }
 }
 .saints .saints__month > ul {
   flex-wrap: nowrap;
@@ -1075,7 +1079,7 @@ hr.hr-limited {
   color: #ffffff;
   white-space: nowrap;
   padding: 8px 12px !important;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .saints .nav-month {

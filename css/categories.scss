@@ -252,31 +252,6 @@ body {
                     top: 60%;
                     left: 50%;
                 } 
-
-                .breadcrumb {
-                    flex-wrap: nowrap;
-                    background: none;
-
-                    & > li {
-                        font-size: 24px;
-                        line-height: auto;
-                        font-weight: 500;
-
-                        @include res_for(sp) {  
-                            font-size: 13px;
-                            font-weight: 500;
-                            line-height: auto;
-                        } 
-
-                        & > a {
-                            color: $grey;
-                        }
-
-                        &.active {
-                            color: #AC1E39;
-                        }
-                    }
-                }
             }
         }
     }
@@ -386,6 +361,32 @@ body {
     }
 }
 
+.breadcrumb {
+    flex-wrap: nowrap;
+    background: none;
+    padding-left: 0;
+
+    & > li {
+        font-size: 24px;
+        line-height: auto;
+        font-weight: 500;
+
+        @include res_for(sp) {  
+            font-size: 13px;
+            font-weight: 500;
+            line-height: auto;
+        } 
+
+        & > a {
+            color: $grey;
+        }
+
+        &.active {
+            color: #AC1E39;
+        }
+    }
+}
+
 // ============================== Categories ==============================
 .post-categories {
     width: 100%;
@@ -490,6 +491,7 @@ body {
             overflow: hidden;
             border-top-right-radius: 20px;
             border-bottom-left-radius: 20px;
+            margin-bottom: 8px;
 
             & > img {
                 width: 100%;
@@ -499,8 +501,8 @@ body {
         }
 
         .categories-card__title {
-            font-size: 18px;
-            line-height: 28px;
+            font-size: 16px;
+            line-height: 26px;
             font-weight: 600;
             color: $black;
             overflow: hidden;
@@ -508,6 +510,7 @@ body {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+            margin-bottom: 8px;
 
             @include res_for(sp) {  
                 font-size: 17px;

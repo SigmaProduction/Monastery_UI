@@ -177,6 +177,11 @@ body {
     background-repeat: repeat-y;
     background-size: cover;
     overflow: hidden;
+    margin-bottom: 140px;
+
+    @include res_for(sp) { 
+        margin-bottom: 40px;
+    }
 
     .description--flying {
         position: relative;
@@ -332,6 +337,7 @@ body {
         }
 
         & > p {
+            text-align: justify;
             padding: 10px;
             
             @include res_for(sp) { 

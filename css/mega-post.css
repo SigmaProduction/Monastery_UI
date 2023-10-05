@@ -192,10 +192,12 @@ body {
 
 .mega-content {
   width: 100%;
+  margin-bottom: 150px;
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
   .mega-content {
     overflow-x: hidden;
+    margin-bottom: 40px;
   }
 }
 .mega-content .mega-content__slide {

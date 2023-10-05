@@ -235,9 +235,11 @@ body {
 // =============== megapost - content ===============
 .mega-content {
     width: 100%;
+    margin-bottom: 150px;
 
     @include res_for(sp) { 
         overflow-x: hidden;
+        margin-bottom: 40px;
     }
 
     .mega-content__slide {

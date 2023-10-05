@@ -159,6 +159,21 @@ body {
     overflow-x: hidden;
   }
 }
+.header-wrap .header-wrap__share {
+  position: fixed;
+  right: 0;
+  bottom: 60%;
+  z-index: 10;
+}
+.header-wrap .header-wrap__share .share--link {
+  width: 60px;
+  height: 60px;
+  background: #052664;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 .header-wrap .header-wrap__heading {
   width: 100%;
   height: auto;
@@ -258,12 +273,17 @@ body {
     transition: all 0.5s ease-in;
   }
 }
+.header-wrap .navbar-custom .navbar-custom__collapse > ul li:hover .dropdown-menu {
+  display: block;
+  transition: all 0.5s ease;
+}
 .header-wrap .navbar-custom .navbar-custom__collapse > ul li > .nav-link {
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
   color: #ffffff;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 .header-wrap .navbar-custom .navbar-custom__collapse > ul li.search {
   background: none;
@@ -357,21 +377,34 @@ body {
     padding: 80px;
   }
 }
-.about-wrap .about-wrap__cloud {
-  position: absolute;
+.about-wrap .cloud-float .about-wrap__cloud {
   width: 100%;
   height: 362px;
-  top: -16%;
-  left: 0;
   background-image: url("../img/images/Clouds-float.png");
   background-size: contain;
   background-position: center;
-  background-repeat: repeat-x;
-  z-index: 2;
+  background-repeat: no-repeat;
   animation: wind 100s linear infinite;
 }
+.about-wrap .cloud-float .about-wrap__cloud:first-child {
+  width: 100%;
+  height: 362px;
+  position: absolute;
+  top: -14%;
+  left: 0;
+  z-index: 2;
+  background-repeat: repeat-x;
+}
+.about-wrap .cloud-float .about-wrap__cloud:last-child {
+  width: 100%;
+  height: 362px;
+  position: absolute;
+  top: -14%;
+  left: -10%;
+  z-index: 2;
+}
 @media screen and (min-width: 310px) and (max-width: 768px) {
-  .about-wrap .about-wrap__cloud {
+  .about-wrap .cloud-float .about-wrap__cloud {
     height: 162px;
     bottom: -10%;
     left: 0;
@@ -412,6 +445,12 @@ body {
     height: 220px;
   }
 }
+@media screen and (min-width: 1250px) and (max-width: 1660px) {
+  .about-wrap .about-wrap__dream-1, .about-wrap .about-wrap__dream-2 {
+    width: 520px;
+    height: 520px;
+  }
+}
 .about-wrap .about-wrap__dream-1 > img, .about-wrap .about-wrap__dream-2 > img {
   width: 650px;
   height: 650px;
@@ -422,6 +461,12 @@ body {
   .about-wrap .about-wrap__dream-1 > img, .about-wrap .about-wrap__dream-2 > img {
     width: 220px;
     height: 220px;
+  }
+}
+@media screen and (min-width: 1250px) and (max-width: 1660px) {
+  .about-wrap .about-wrap__dream-1 > img, .about-wrap .about-wrap__dream-2 > img {
+    width: 520px;
+    height: 520px;
   }
 }
 .about-wrap .about-wrap__dream-1 {

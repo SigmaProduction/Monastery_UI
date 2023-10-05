@@ -136,7 +136,7 @@ body {
 }
 .post-detail .post-detail__img {
   width: 100%;
-  height: 600px;
+  height: 810px;
   overflow: hidden;
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
@@ -146,7 +146,7 @@ body {
 }
 .post-detail .post-detail__img > img {
   width: 100%;
-  height: 600px;
+  height: 810px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -156,7 +156,7 @@ body {
   }
 }
 .post-detail .post-detail__content {
-  background: #ffffff;
+  background: #f8f9fa;
   box-shadow: 10px 10px 20px 0px #A6ABBD, -10px -10px 20px 0px #FAFBFF;
   padding: 80px;
   margin-top: 40px;
@@ -204,6 +204,9 @@ body {
   .post-detail .post-detail__content .detail .detail__writer {
     margin-bottom: 20px;
   }
+}
+.post-detail .post-detail__content .detail .detail__content {
+  text-align: justify;
 }
 .post-detail .post-detail__content .topic-related {
   font-size: 32px;

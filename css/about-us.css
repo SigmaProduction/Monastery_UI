@@ -133,6 +133,12 @@ body {
   background-repeat: repeat-y;
   background-size: cover;
   overflow: hidden;
+  margin-bottom: 140px;
+}
+@media screen and (min-width: 310px) and (max-width: 768px) {
+  .mega-about {
+    margin-bottom: 40px;
+  }
 }
 .mega-about .description--flying {
   position: relative;
@@ -289,6 +295,7 @@ body {
   }
 }
 .mega-about .mega-about__content > p {
+  text-align: justify;
   padding: 10px;
 }
 @media screen and (min-width: 310px) and (max-width: 768px) {
